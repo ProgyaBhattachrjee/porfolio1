@@ -1,0 +1,396 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+
+:root {
+  --primary-color: #0e86d4;
+  --secondary-color: #68BBE3;
+  --background-color: #ffffff;
+  --text-color: #003060;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+* {
+    font-family: "Montserrat", sans-serif;
+    padding: 0;
+    border: 0;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    background: linear-gradient(180deg, var(--primary-color), var(--background-color));
+}
+
+@media (min-width: 768px) {
+    .nav {
+        flex-direction: row;
+        gap: 60%;
+    }
+}
+
+.nav h1 {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.nav1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+@media (min-width: 768px) {
+    .nav1 {
+        flex-direction: row;
+        gap: 30px;
+    }
+}
+
+.nav1 .l:hover {
+    color: var(--primary-color);
+   text-decoration: underline;
+}
+
+.foot {
+    background: linear-gradient(360deg, var(--primary-color), var(--background-color));
+}
+
+.foot1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .foot1 {
+        flex-direction: row;
+    }
+}
+
+.f1 {
+    display: flex;
+    gap: 5px;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .home {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.rec1 {
+    display: none;
+    width: 296px;
+    height: 486px;
+    background: url('../public/images/Rectangle 2.png') no-repeat center center;
+    background-size: cover;
+}
+
+.rec2 {
+    display: none;
+    width: 400px;
+    height: 500px;
+    background: url('../public/images/Rectangle 3.png');
+}
+
+.home h1 {
+    font-size: 2.1875rem;
+    font-weight: bold;
+    background: linear-gradient(var(--secondary-color), var(--primary-color));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    position: relative;
+    overflow: hidden;
+}
+.home h1::before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  height: 90%;
+  width: 20%;
+  border-bottom: 3px solid #0056b3;
+  text-shadow: 0 0 10px #0056b3, 
+    0 0 20px #0056b3,
+    0 0 30px #0056b3,
+    0 0 40px #0056b3,
+    0 0 50px #0056b3;
+    transform: translateX(-100%);
+    opacity: 1;
+    animation: anim 2s ease-in-out infinite;
+}
+@keyframes anim {
+  0%{
+    opacity: 1;
+    transform: translateX(-100%);
+  }
+  50%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100%{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+.home h2 {
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 100;
+    color: #003060;
+    
+}
+
+.home button {
+    background: linear-gradient(var(--secondary-color), var(--primary-color));
+    padding: 10px;
+    width: 245px;
+    height: 45px;
+    border-radius: 20px;
+    margin-top: 50px;
+    color: white;
+    margin-bottom: 80px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.home button:hover{
+  background: var(--secondary-color);
+}
+.about h4 {
+    font-family: "Nothing You Could Do", cursive;
+    font-size: 54px;
+    font-weight: lighter;
+    width: fit-content;
+    margin-left: 10px;
+    color: #ffffff;
+    text-shadow: 0 0 10px var(--primary-color), 
+    0 0 20px var(--primary-color),
+    0 0 30px var(--primary-color),
+    0 0 40px var(--primary-color),
+    0 0 50px var(--primary-color);
+    animation: anim1 2s linear infinite;
+}
+
+.about p {
+    font-size: 12px;
+    padding: 20px;
+}
+
+.p2 {
+    font-family: "Nothing You Could Do", cursive;
+    font-size: 54px;
+    font-weight: lighter;
+    color: #ffffff;
+    text-shadow: 0 0 10px var(--primary-color), 
+    0 0 20px var(--primary-color),
+    0 0 30px var(--primary-color),
+    0 0 40px var(--primary-color),
+    0 0 50px var(--primary-color);
+    width: fit-content;
+    margin-left: 10px;
+    animation: anim1 2s linear infinite;
+}
+
+.p1 {
+    font-family: "Nothing You Could Do", cursive;
+    color: #ffffff;
+    text-shadow: 0 0 10px var(--primary-color), 
+    0 0 20px var(--primary-color),
+    0 0 30px var(--primary-color),
+    0 0 40px var(--primary-color),
+    0 0 50px var(--primary-color);
+    font-size: 38px;
+    width: fit-content;
+    margin-left: 10px;
+    animation: anim1 2s linear infinite;
+}
+@keyframes anim1 {
+  0%{
+    text-shadow: 0 0 10px var(--primary-color), 
+    0 0 20px var(--primary-color),
+    0 0 30px var(--primary-color),
+    0 0 40px var(--primary-color),
+    0 0 50px var(--primary-color);
+  }
+  100%{
+    text-shadow: 0 0 10px var(--secondary-color), 
+    0 0 20px var(--secondary-color),
+    0 0 30px var(--secondary-color),
+    0 0 40px var(--secondary-color),
+    0 0 50px var(--secondary-color);
+  }
+}
+.tech {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.bar1 {
+    margin: 10px;
+}
+.home{
+  margin: 30px;
+}
+progress::-webkit-progress-value {
+    background: var(--text-color);
+}
+.nav img{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+}
+@media (min-width: 768px) {
+    .rec1 {
+        display: block;
+    }
+    .rec2 {
+        display: block;
+    }
+    .home button {
+        margin-bottom: 0px;
+    }
+    .tech {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 20px;
+    }
+    .home{
+      margin: 0;
+    }
+    .nav img{
+     height: 0px;
+     width: 0px;
+    }
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-bottom: 20px;
+}
+
+.card {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    background: linear-gradient(var(--secondary-color), var(--background-color));
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.card img:hover{
+  transform: scale(1.2);
+}
+.card h3 {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.project-content {
+    margin: 20px;
+}
+
+.card p {
+    margin-bottom: 1rem;
+    font-size: 12px;
+}
+
+.card a {
+    color: #007bff;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.card a:hover {
+    color: #0056b3;
+}
+
+.project-links {
+    display: flex;
+    gap: 50px;
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+}
+
+
+.animated-titles {
+  position: relative;
+  height: 4rem; 
+  overflow: hidden;
+}
+
+.title {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+  animation: slideIn 3s infinite;
+}
+
+.title:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.title:nth-child(2) {
+  animation-delay: 1.5s;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+
+  }
+  40% {
+    opacity: 1;
+
+  }
+  50% {
+    opacity: 0;
+
+  }
+  100% {
+    opacity: 0;
+
+  }
+}
