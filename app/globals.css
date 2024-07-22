@@ -23,6 +23,16 @@ body {
   border: 0;
 }
 
+/* Override dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #0e86d4;
+    --secondary-color: #68BBE3;
+    --background-color: #ffffff;
+    --text-color: #003060;
+  }
+}
+
 .nav {
   display: flex;
   flex-direction: column;
@@ -115,6 +125,7 @@ body {
   height: 500px;
   background: url('../public/images/Rectangle 3.png');
 }
+
 .home h1 {
     font-size: 2.1875rem;
     font-weight: bold;
@@ -124,7 +135,8 @@ body {
     position: relative;
     overflow: hidden;
 }
-.home h1::before{
+
+.home h1::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -141,26 +153,27 @@ body {
     opacity: 1;
     animation: anim 2s ease-in-out infinite;
 }
+
 @keyframes anim {
-  0%{
+  0% {
     opacity: 1;
     transform: translateX(-100%);
   }
-  50%{
+  50% {
     opacity: 1;
     transform: translateX(0);
   }
-  100%{
+  100% {
     opacity: 0;
     transform: translateX(-100%);
   }
 }
+
 .home h2 {
     font-size: 2.5rem;
     font-style: italic;
     font-weight: 100;
     color: #003060;
-    
 }
 
 .home button {
@@ -174,9 +187,11 @@ body {
     margin-bottom: 80px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.home button:hover{
+
+.home button:hover {
   background: var(--secondary-color);
 }
+
 .about h4 {
     font-family: "Nothing You Could Do", cursive;
     font-size: 54px;
@@ -225,15 +240,16 @@ body {
     margin-left: 10px;
     animation: anim1 2s linear infinite;
 }
+
 @keyframes anim1 {
-  0%{
+  0% {
     text-shadow: 0 0 10px var(--primary-color), 
     0 0 20px var(--primary-color),
     0 0 30px var(--primary-color),
     0 0 40px var(--primary-color),
     0 0 50px var(--primary-color);
   }
-  100%{
+  100% {
     text-shadow: 0 0 10px var(--secondary-color), 
     0 0 20px var(--secondary-color),
     0 0 30px var(--secondary-color),
@@ -241,6 +257,7 @@ body {
     0 0 50px var(--secondary-color);
   }
 }
+
 .tech {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -249,13 +266,16 @@ body {
 .bar1 {
     margin: 10px;
 }
-.home{
+
+.home {
   margin: 30px;
 }
+
 progress::-webkit-progress-value {
     background: var(--text-color);
 }
-.nav img{
+
+.nav img {
   height: 100px;
   width: 100px;
   position: absolute;
@@ -263,50 +283,57 @@ progress::-webkit-progress-value {
   right: 0;
   margin: 20px;
 }
-@media (min-width: 768px) {
-    .rec1 {
-        display: block;
-    }
-    .rec2 {
-        display: block;
-    }
-    .home button {
-        margin-bottom: 0px;
-    }
-    .tech {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        margin: 20px;
-    }
-    .home{
-      margin: 0;
-    }
-    .nav img{
-     height: 0px;
-     width: 0px;
-    }
-    .projects{
-      grid-template-columns: 1fr ;
-    }
-}
 
 .projects {
+  display: block;
+}
+
+.card {
+  position: relative;
+  margin: 40px;
+  height: 450px;
+  width: 300px;
+  background: linear-gradient(var(--secondary-color), var(--background-color));
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+@media (min-width: 768px) {
+  .rec1 {
+      display: block;
+  }
+  .rec2 {
+      display: block;
+  }
+  .home button {
+      margin-bottom: 0px;
+  }
+  .tech {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin: 20px;
+  }
+  .home {
+    margin: 0;
+  }
+  .nav img {
+   height: 0px;
+   width: 0px;
+  }
+  .projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     margin-top: 50px;
     margin-left: 10%;
     margin-bottom: 20px;
-}
-
-.card {
-    position: relative;
-    height: 400px;
+  }
+  .card {
     width: 400px;
-    background: linear-gradient(var(--secondary-color), var(--background-color));
-    border: 1px solid black;
-    border-radius: 20px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    height: 400px;
+    margin: 10px;
+  }
 }
 
 .card img {
@@ -316,9 +343,11 @@ progress::-webkit-progress-value {
     border: 1px solid black;
     border-radius: 20px;
 }
-.card img:hover{
+
+.card img:hover {
   transform: scale(1.2);
 }
+
 .card h3 {
     margin-top: 10px;
     font-weight: bold;
@@ -351,7 +380,6 @@ progress::-webkit-progress-value {
     bottom: 10px;
 }
 
-
 .animated-titles {
   position: relative;
   height: 4rem; 
@@ -362,7 +390,6 @@ progress::-webkit-progress-value {
   position: absolute;
   width: 100%;
   height: 100%;
-
   opacity: 0;
   animation: slideIn 3s infinite;
 }
@@ -381,18 +408,14 @@ progress::-webkit-progress-value {
   }
   10% {
     opacity: 1;
-
   }
   40% {
     opacity: 1;
-
   }
   50% {
     opacity: 0;
-
   }
   100% {
     opacity: 0;
-
   }
 }
