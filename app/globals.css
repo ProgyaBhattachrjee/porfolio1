@@ -286,13 +286,14 @@ progress::-webkit-progress-value {
 
 .projects {
   display: block;
+
 }
 
 .card {
   position: relative;
-  margin: 40px;
+  margin: 5px;
   height: 450px;
-  width: 300px;
+  width: 280px;
   background: linear-gradient(var(--secondary-color), var(--background-color));
   border: 1px solid black;
   border-radius: 20px;
