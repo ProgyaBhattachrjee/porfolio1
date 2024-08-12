@@ -18,7 +18,7 @@ const Page = () => {
   <h2 className="title">UI UX Designer</h2>
 </div>
     <button>
-      <a href="https://drive.google.com/file/d/1fHe53n4Y0O7mcv6CePfzM_uSSVzIEwAf/view?usp=sharing ">Resume</a></button>
+      <a href="https://drive.google.com/file/d/1ipG0m4u28tP3hjPTHBeeydz_fuTfCpDp/view?usp=sharing">Resume</a></button>
   </div>
   <div className='rec2'>
     <div style={{ marginTop: '80px' }}>
